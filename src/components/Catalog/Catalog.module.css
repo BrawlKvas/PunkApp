@@ -1,0 +1,24 @@
+.catalog {
+  display: flex;
+}
+
+.list {
+  padding: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.card {
+  width: 100%;
+  max-width: 1000px;
+  height: 300px;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.card:not(last-of-type) {
+  margin-bottom: 30px;
+}

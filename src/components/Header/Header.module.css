@@ -1,0 +1,29 @@
+.header {
+  background-color: tomato;
+}
+
+.container {
+  height: 85px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav {
+  margin-left: 30px;
+}
+
+.nav > button:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.inputSearch {
+  padding: 8px 10px 8px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}

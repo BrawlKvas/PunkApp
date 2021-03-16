@@ -11,9 +11,14 @@ async function request(...args) {
 export const PunkAPI = {
   baseUrl: 'https://api.punkapi.com/v2/',
 
-  getBeers(page, pageSize) {
-    return request(`
-      ${this.baseUrl}beers?page=${page}&per_page=${pageSize}
-    `)
+  getBeer(beerName) {
+    if (beerName)
+      return request(`
+        ${this.baseUrl}beers?page=1&per_page=80&beer_name=${beerName}
+      `)
+    else
+      return request(`
+        ${this.baseUrl}beers?page=1&per_page=80
+      `)
   }
 }

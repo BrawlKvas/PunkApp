@@ -1,5 +1,9 @@
 .header {
-  background-color: tomato;
+  background-color: #1976d2;
+  box-shadow: 
+    0px 2px 4px -1px rgb(0 0 0 / 20%), 
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
 }
 
 .container {
@@ -14,7 +18,7 @@
   margin-left: 30px;
 }
 
-.nav > button:not(:last-of-type) {
+.navItem:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -26,4 +30,14 @@
   font-size: 16px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inputSearch::placeholder {
+  color: rgba(255, 255, 255, .7);
+}
+
+.cartCounter {
+  padding: 2px;
+  color: rgba(0, 0, 0, .7);
+  font-weight: bold;
 }

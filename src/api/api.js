@@ -1,3 +1,5 @@
+const BASE_URL = 'https://api.punkapi.com/v2/'
+
 async function request(...args) {
   const res = await fetch(...args)
 
@@ -8,17 +10,13 @@ async function request(...args) {
   return res.json()
 }
 
-export const PunkAPI = {
-  baseUrl: 'https://api.punkapi.com/v2/',
-
-  getBeer(beerName) {
-    if (beerName)
-      return request(`
-        ${this.baseUrl}beers?page=1&per_page=80&beer_name=${beerName}
-      `)
-    else
-      return request(`
-        ${this.baseUrl}beers?page=1&per_page=80
-      `)
-  }
+export const requestBeer = (beerName) => {
+  if (beerName)
+    return request(`
+      ${BASE_URL}beers?page=1&per_page=80&beer_name=${beerName}
+    `)
+  else
+    return request(`
+      ${BASE_URL}beers?page=1&per_page=80
+    `)
 }

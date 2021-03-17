@@ -29,8 +29,8 @@ const Modal = ({ onClose, children }) => {
 
     document.body.append(wrapper)
 
-    wrapper.onclick = (e) => {
-      if (e.target === wrapper)
+    wrapper.onclick = ({ target }) => {
+      if (target === wrapper)
         onClose()
     }
 

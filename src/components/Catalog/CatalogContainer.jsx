@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Catalog from './Catalog'
-import { getBeer, addToCart, setCurrentPage } from '../../redux/rootReducer'
+import { getBeer, addToCart, setCurrentPage } from '../../redux/actions'
 
 const CatalogContainer = ({ getBeer, query, setCurrentPage, ...props }) => {
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import CartItem from './CartItem/CartItem'
-import { removeFromCart } from '../../redux/rootReducer'
+import { removeFromCart } from '../../redux/actions'
 
 import styles from './Cart.module.css'
 

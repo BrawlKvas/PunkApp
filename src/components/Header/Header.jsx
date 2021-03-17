@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { useState } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { setQuery } from '../../redux/rootReducer'
+import { setQuery } from '../../redux/actions'
 import SignUpModal from './SignUpModal/SignUpModal'
 
 import styles from './Header.module.css'
@@ -10,9 +10,9 @@ import styles from './Header.module.css'
 const Header = ({ cartCounter, query, setQuery }) => {
   const [open, setOpen] = useState(false)
 
-  const changeHandler = (e) => {
-    if (e.target.value !== ' ')
-      setQuery(e.target.value)
+  const changeHandler = ({ target }) => {
+    if (target.value !== ' ')
+      setQuery(target.value)
   }
 
   return (

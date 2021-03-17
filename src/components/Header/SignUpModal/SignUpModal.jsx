@@ -21,8 +21,8 @@ const SignUpModal = ({ onClose }) => {
     date: null,
   })
 
-  const changeHandler = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
+  const changeHandler = ({ target }) => {
+    setForm({ ...form, [target.name]: target.value })
   }
 
   const validate = () => {

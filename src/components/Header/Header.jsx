@@ -28,6 +28,10 @@ const Header = ({ cartCounter, query, setQuery }) => {
         <nav className={styles.nav}>
           <button className={classNames(styles.navItem, 'btn')} onClick={() => setOpen(true)}>Sign Up</button>
 
+          <NavLink to='/catalog' className={classNames(styles.navItem, 'btn')}>
+            Catalog
+          </NavLink>
+
           <NavLink to='/cart' className={classNames(styles.navItem, 'btn')}>
             Cart <span className={styles.cartCounter}>{cartCounter}</span>
           </NavLink>
